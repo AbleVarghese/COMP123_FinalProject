@@ -12,9 +12,11 @@ namespace FinalProject
 {
     public partial class OrderForm : Form
     {
+       
         public OrderForm()
         {
             InitializeComponent();
+         
         }
 
       
@@ -37,14 +39,32 @@ namespace FinalProject
 
         }
 
+
+        
+
         private void PrintButtonClick(object sender, EventArgs e)
         {
-           
-
+            printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
+            printForm1.Print();  
         }
+
+
 
         private void AboutButtonClick(object sender, EventArgs e)
         {
+            AboutBox aboutBox = new AboutBox();
+            this.Hide();
+            aboutBox.Owner = this;
+            aboutBox.Show();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectionForm selectionForm = new SelectionForm();
+            this.Hide();
+            selectionForm.Owner = this;
+            selectionForm.Show();
 
         }
 
