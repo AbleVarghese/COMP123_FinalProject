@@ -17,18 +17,7 @@ namespace FinalProject
             InitializeComponent();
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void streamToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            StreamForm streamForm = new StreamForm();
-            this.Hide();
-            streamForm.Owner = this;
-            streamForm.Show();
-        }
+      
 
        
 
