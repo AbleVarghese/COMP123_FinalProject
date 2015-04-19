@@ -25,17 +25,15 @@ namespace FinalProject
             this.labelWebsite.Text = "Website: MovieBonanza.com";
         }
 
-      
-
-        private void AboutBox_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            OrderForm orderForm = new OrderForm();
+            this.Hide();
+            orderForm.Owner = this;
+            orderForm.Show();
+          
         }
 
 
