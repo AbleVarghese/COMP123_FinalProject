@@ -42,7 +42,6 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.MovieSelected = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -60,10 +59,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.MovieSelected.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.YourOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -129,7 +129,7 @@
             this.CancelButton_.Location = new System.Drawing.Point(537, 523);
             this.CancelButton_.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButton_.Name = "CancelButton_";
-            this.CancelButton_.Size = new System.Drawing.Size(100, 37);
+            this.CancelButton_.Size = new System.Drawing.Size(104, 37);
             this.CancelButton_.TabIndex = 1;
             this.CancelButton_.Text = "Cancel";
             this.CancelButton_.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@
             // 
             this.StreamButton.Location = new System.Drawing.Point(397, 523);
             this.StreamButton.Name = "StreamButton";
-            this.StreamButton.Size = new System.Drawing.Size(110, 37);
+            this.StreamButton.Size = new System.Drawing.Size(104, 37);
             this.StreamButton.TabIndex = 2;
             this.StreamButton.Text = "Stream";
             this.StreamButton.UseVisualStyleBackColor = true;
@@ -176,14 +176,6 @@
             this.MovieSelected.TabIndex = 3;
             this.MovieSelected.TabStop = false;
             this.MovieSelected.Text = "Movie Selected";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(311, 294);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -234,7 +226,7 @@
             this.YourOrder.Controls.Add(this.label3);
             this.YourOrder.Location = new System.Drawing.Point(360, 69);
             this.YourOrder.Name = "YourOrder";
-            this.YourOrder.Size = new System.Drawing.Size(304, 439);
+            this.YourOrder.Size = new System.Drawing.Size(304, 336);
             this.YourOrder.TabIndex = 4;
             this.YourOrder.TabStop = false;
             this.YourOrder.Text = "Your Order";
@@ -329,11 +321,11 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(51, 39);
+            this.checkBox1.Location = new System.Drawing.Point(10, 270);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(95, 21);
+            this.checkBox1.Size = new System.Drawing.Size(271, 21);
             this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Buy Movie";
+            this.checkBox1.Text = "Order the DVD (add 10$ to your order";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button1
@@ -345,6 +337,14 @@
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(311, 311);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // OrderForm
             // 
@@ -365,14 +365,14 @@
             this.Name = "OrderForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
+            this.Text = "Your Order";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.MovieSelected.ResumeLayout(false);
             this.MovieSelected.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.YourOrder.ResumeLayout(false);
             this.YourOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
