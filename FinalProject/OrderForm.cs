@@ -12,17 +12,14 @@ namespace FinalProject
 {
     public partial class OrderForm : Form
     {
-       
+        //Constructor of Order form Class ###################################################
         public OrderForm()
         {
             InitializeComponent();
-         
+
         }
 
-      
-
-       
-
+        // Stream button click navigates from order form to selection form
         private void StreamButtonClick(object sender, EventArgs e)
         {
             StreamForm streamForm = new StreamForm();
@@ -32,7 +29,7 @@ namespace FinalProject
 
         }
 
-
+        //Cancel Button click action (exiting he app).
         private void CancelButtonClick(object sender, EventArgs e)
         {
             Application.Exit();
@@ -40,16 +37,16 @@ namespace FinalProject
         }
 
 
-        
 
+        //Print button click execute the print preview dialogbox
         private void PrintButtonClick(object sender, EventArgs e)
         {
             printForm1.PrintAction = System.Drawing.Printing.PrintAction.PrintToPreview;
-            printForm1.Print();  
+            printForm1.Print();
         }
 
 
-
+        //About button click - Showing about button
         private void AboutButtonClick(object sender, EventArgs e)
         {
             AboutBox aboutBox = new AboutBox();
@@ -59,16 +56,16 @@ namespace FinalProject
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Back button click that takes from order form to the selection form
+        private void backButtonClick(object sender, EventArgs e)
         {
             SelectionForm selectionForm = new SelectionForm();
             this.Hide();
             selectionForm.Owner = this;
             selectionForm.Show();
-
         }
 
-       
+
 
     }
 }

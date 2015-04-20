@@ -16,7 +16,7 @@ namespace FinalProject
         {
             InitializeComponent();
         }
-
+//3 second timer setting function
         private void timer_Tick(object sender, EventArgs e)
         {
             

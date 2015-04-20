@@ -19,7 +19,7 @@ namespace FinalProject
         int _movieIndex;
 
 
-
+        //Constructor of Selection Form Class ############################################
         public SelectionForm()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace FinalProject
             InitializeMovieSelectionComboBox();
         }
 
-
+        // Initializing and adding the movie list their category and cost into a list
         private void InitializeMovieList()
         {
 
@@ -54,7 +54,7 @@ namespace FinalProject
 
         }
 
-
+        // Initialzing the combobox with all the movies, their categories and costs
         private void InitializeMovieSelectionComboBox()
         {
             foreach (var movie in movies)
@@ -64,9 +64,9 @@ namespace FinalProject
             }
         }
 
-        
-        
 
+
+        //Action to carryoout then a selection is made in the Combobox 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             NextButton.Enabled = false;
@@ -76,26 +76,27 @@ namespace FinalProject
             MovieTitleTextBox.Text = movies[this._movieIndex].Title;
             MovieCategoryTextBox.Text = movies[this._movieIndex].Category;
             MovieCostTextBox.Text = movies[this._movieIndex].Cost.ToString();
-           NextButton.Enabled = true;
-           
-           //Storing Movie selection, movie category, and movie cost in a array 
-            string [] storeMovie={movies[this._movieIndex].Title, movies[this._movieIndex].Category, movies[this._movieIndex].Cost.ToString()};
-        
+            NextButton.Enabled = true;
 
- 
-        
+
+            //Storing Movie selection, movie category, and movie cost in a array 
+            string[] storeMovie = { movies[this._movieIndex].Title, movies[this._movieIndex].Category, movies[this._movieIndex].Cost.ToString() };
+
+
+
+
         }
 
-
+        //  Next button click navigates from selection form to the order form
         private void Nextbutton1_Click(object sender, EventArgs e)
         {
-           
+
             OrderForm orderForm = new OrderForm();
             this.Hide();
             orderForm.Owner = this;
             orderForm.Show();
 
         }
-       
+
     }
 }

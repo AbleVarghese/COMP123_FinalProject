@@ -12,11 +12,13 @@ namespace FinalProject
 {
     public partial class StreamForm : Form
     {
+        // initializing the streamForm
         public StreamForm()
         {
             InitializeComponent();
         }
 
+        //Okay button click to exit the application
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();

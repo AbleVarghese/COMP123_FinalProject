@@ -42,11 +42,13 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printForm1 = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.MovieSelected = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.YourOrder = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -57,13 +59,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.MovieSelected.SuspendLayout();
-            this.YourOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.YourOrder.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -91,21 +91,21 @@
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.PrintButtonClick);
             // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.streamToolStripMenuItem.Text = "Stream";
             this.streamToolStripMenuItem.Click += new System.EventHandler(this.StreamButtonClick);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(125, 24);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.cancelToolStripMenuItem.Text = "Cancel";
             this.cancelToolStripMenuItem.Click += new System.EventHandler(this.CancelButtonClick);
             // 
@@ -120,7 +120,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutButtonClick);
             // 
@@ -177,6 +177,14 @@
             this.MovieSelected.TabStop = false;
             this.MovieSelected.Text = "Movie Selected";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(311, 311);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -230,6 +238,16 @@
             this.YourOrder.TabIndex = 4;
             this.YourOrder.TabStop = false;
             this.YourOrder.Text = "Your Order";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(10, 270);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(271, 21);
+            this.checkBox1.TabIndex = 3;
+            this.checkBox1.Text = "Order the DVD (add 10$ to your order";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // textBox6
             // 
@@ -318,16 +336,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Movie\'s Cost";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(10, 270);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(271, 21);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Order the DVD (add 10$ to your order";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(258, 523);
@@ -336,15 +344,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(311, 311);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.backButtonClick);
             // 
             // OrderForm
             // 
@@ -370,9 +370,9 @@
             this.menuStrip1.PerformLayout();
             this.MovieSelected.ResumeLayout(false);
             this.MovieSelected.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.YourOrder.ResumeLayout(false);
             this.YourOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

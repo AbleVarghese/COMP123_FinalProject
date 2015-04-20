@@ -18,14 +18,14 @@ namespace FinalProject
         {
             get
             {
-                return this._title; 
+                return this._title;
             }
         }
         public string Category
         {
             get
             {
-                return this._category; 
+                return this._category;
             }
         }
 
@@ -33,7 +33,7 @@ namespace FinalProject
         {
             get
             {
-                return this._cost; 
+                return this._cost;
             }
         }
 
@@ -48,10 +48,10 @@ namespace FinalProject
 
 
         // PUBLIC METHODS ########################################################
-        // Default comparer for Movie type - compares the title property
+        // Method that compares the title property
         public int CompareTo(Movie compareMovie)
         {
-            // A null value means that this object is greater. 
+
             if (compareMovie == null)
                 return 1;
 
